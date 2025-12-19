@@ -1,10 +1,10 @@
 %define module time-machine
 %define oname time_machine
 # disable test for abf
-%bcond_with test
+%bcond test 0
 
 Name:		python-time-machine
-Version:	2.16.0
+Version:	3.2.0
 Release:	1
 Summary:	Travel through time in your tests
 URL:		https://github.com/adamchainz/time-machine
@@ -14,7 +14,7 @@ Source0:	https://github.com/adamchainz/time-machine/archive/refs/tags/%{version}
 BuildSystem:	python
 
 BuildRequires:	python
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(python-dateutil)
 BuildRequires:	python%{pyver}dist(setuptools)
@@ -35,15 +35,6 @@ Requires:	timezone
 
 %description
 Travel through time in your tests.
-
-%prep
-%autosetup -n %{module}-%{version} -p1
-
-%build
-%py3_build
-
-%install
-%py3_install
 
 %if %{with test}
 %check
