@@ -5,7 +5,7 @@
 
 Name:		python-time-machine
 Version:	3.2.0
-Release:	1
+Release:	2
 Summary:	Travel through time in your tests
 URL:		https://github.com/adamchainz/time-machine
 License:	MIT
@@ -14,7 +14,7 @@ Source0:	https://github.com/adamchainz/time-machine/archive/refs/tags/%{version}
 BuildSystem:	python
 
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(python-dateutil)
 BuildRequires:	python%{pyver}dist(setuptools)
