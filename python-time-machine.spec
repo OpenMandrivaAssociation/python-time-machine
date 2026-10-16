@@ -4,8 +4,8 @@
 %bcond test 0
 
 Name:		python-time-machine
-Version:	3.2.0
-Release:	2
+Version:	3.3.1
+Release:	1
 Summary:	Travel through time in your tests
 URL:		https://github.com/adamchainz/time-machine
 License:	MIT
